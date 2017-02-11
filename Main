@@ -1,0 +1,9 @@
+Repeating Command Block: /scoreboard objectives add SHOP dummy
+Chain Command Block: /stats entity @a set AffectedItems @a[c=1] ITEMS
+Chain Command Block: /scoreboard players add @a ITEMS 0
+Chain Command Block: /execute @a ~ ~ ~ clear @a[c=1] minecraft:grass 0 0
+Chain Command Block: /testfor @a[score_ITEMS_min=5]
+Conditional Chain Command Block: /clear @a[score_SHOP_min=1,score_SHOP=2] grass 0 5
+Conditional Chain Command Block: /give @a[score_SHOP_min=1,score_SHOP=2] diamond 30
+Chain Command Block: /scoreboard players reset @a[score_SHOP_min=1] SHOP
+Seperate Command Block: /scoreboard objectives add ITEMS dummy
